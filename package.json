@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "pnpm -C play dev",
     "docs": "pnpm -C docs dev",
+    "build": "pnpm -C docs build",
     "test": "pnpm -C packages/components test",
     "lint": "eslint --ext .js,.ts,.tsx,.vue ."
   },

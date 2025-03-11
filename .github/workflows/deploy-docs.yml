@@ -30,7 +30,7 @@ jobs:
         run: |
           # 如果您有构建文档的命令，请在这里运行
           # 例如，如果您使用 VitePress：
-          pnpm run docs:build  # 替换为您的构建命令
+          pnpm run build  # 替换为您的构建命令
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
