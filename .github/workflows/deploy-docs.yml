@@ -1,0 +1,39 @@
+# .github/workflows/deploy-docs.yml
+name: Deploy Docs
+
+on:
+  push:
+    branches:
+      - main # 或您希望触发部署的其他分支
+  pull_request:
+    branches:
+      - main # 或您希望触发部署的其他分支
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16" # 使用您项目所需的 Node.js 版本
+
+      - name: Install dependencies
+        run: |
+          pnpm install  # 或者使用 npm install/yarn install
+
+      - name: Build docs
+        run: |
+          # 如果您有构建文档的命令，请在这里运行
+          # 例如，如果您使用 VitePress：
+          pnpm run docs:build  # 替换为您的构建命令
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/.vitepress/dist # 替换为您的文档输出目录

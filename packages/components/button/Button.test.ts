@@ -16,7 +16,12 @@ describe("Button.vue", () => {
 
   // 测试按钮类型
   it("renders different types correctly", () => {
-    const types = ["primary", "success", "warning", "danger"];
+    const types: Array<"primary" | "success" | "warning" | "danger"> = [
+      "primary",
+      "success",
+      "warning",
+      "danger",
+    ];
     types.forEach((type) => {
       const wrapper = mount(Button, {
         props: { type },
@@ -27,7 +32,7 @@ describe("Button.vue", () => {
 
   // 测试按钮尺寸
   it("renders different sizes correctly", () => {
-    const sizes = ["large", "small"];
+    const sizes: ("large" | "small")[] = ["large", "small"];
     sizes.forEach((size) => {
       const wrapper = mount(Button, {
         props: { size },

@@ -7,7 +7,7 @@
     <h1>YX Components Playground</h1>
     <div class="component-display">
       <!-- 在这里测试组件 -->
-      <yx-button>123</yx-button>
+      <yx-button type="primary">123</yx-button>
     </div>
   </div>
 </template>
