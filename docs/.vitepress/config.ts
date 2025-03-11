@@ -11,7 +11,11 @@ export default defineConfig({
       },
       {
         text: "组件",
-        link: "/components/button.md",
+        link: "/components/",
+      },
+      {
+        text: "需求文档",
+        link: "/requires",
       },
     ],
     sidebar: {
@@ -22,6 +26,18 @@ export default defineConfig({
             { text: "介绍", link: "/guide/" }, // 确保链接正确
             { text: "快速开始", link: "/guide/getting-started" },
           ],
+        },
+      ],
+      "/components/": [
+        {
+          text: "组件",
+          items: [{ text: "Button", link: "/components/button.md" }],
+        },
+      ],
+      "/requires/": [
+        {
+          text: "需求文档",
+          items: [{ text: "Button", link: "/requires/button.r.md" }],
         },
       ],
     },

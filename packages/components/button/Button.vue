@@ -1,5 +1,5 @@
 <template>
-  <button class="yx-button">yxbutton</button>
+  <button class="yx-button"><slot></slot></button>
 </template>
 
 <script setup lang="ts">
@@ -8,8 +8,5 @@
 
 <style scoped>
 .yx-button {
-  width: 200px;
-  height: 100px;
-  background: red;
 }
 </style>
