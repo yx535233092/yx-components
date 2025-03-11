@@ -1,0 +1,16 @@
+{
+  "name": "yx-components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "play": "pnpm -C play dev",
+    "docs": "pnpm -C docs dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@yx-components/components": "workspace:*"
+  }
+}
