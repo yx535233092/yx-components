@@ -20,17 +20,15 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "16" # 使用您项目所需的 Node.js 版本
+          node-version: "18" # 使用您项目所需的 Node.js 版本
 
       - name: Install dependencies
         run: |
-          pnpm install  # 或者使用 npm install/yarn install
+          pnpm install
 
       - name: Build docs
         run: |
-          # 如果您有构建文档的命令，请在这里运行
-          # 例如，如果您使用 VitePress：
-          pnpm run build  # 替换为您的构建命令
+          pnpm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
