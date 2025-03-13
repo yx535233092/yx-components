@@ -1,0 +1,33 @@
+{
+  "name": "yx-components",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm -C play dev",
+    "docs": "pnpm -C docs dev",
+    "docs:build": "pnpm --filter docs build",
+    "build": "pnpm -C docs build",
+    "test": "pnpm -C packages/components test",
+    "lint": "eslint --ext .js,.ts,.tsx,.vue ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/test-utils": "^2.4.6",
+    "jsdom": "^26.0.0",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.1",
+    "vitepress": "^1.6.3",
+    "vitest": "^3.0.8",
+    "vue-tsc": "^2.2.8"
+  },
+  "dependencies": {
+    "@yx-components/components": "workspace:*",
+    "@yx-components/theme": "workspace:*",
+    "vue": "^3.5.13"
+  }
+}

@@ -1,0 +1,8 @@
+import { createApp } from "vue";
+import App from "./App.vue";
+import Button from "@yx-components/components/button";
+import "@yx-components/theme";
+
+const app = createApp(App);
+app.use(Button);
+app.mount("#app");
