@@ -3,22 +3,22 @@
 layout: home
 
 hero:
-  name: "Element-Plus-Copy"
-  text: "仿学elementplus"
-  tagline: My great project tagline
+  name: "YX Components"
+  text: "组件库"
+  tagline: 构建现代化的用户界面
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: 查看组件
+      link: /components/
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 使用指南
+      link: /guide/
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 丰富的组件库
+    details: 提供多种常用组件，满足不同需求。
+  - title: 详细的文档
+    details: 包含使用指南和示例，帮助快速上手。
+  - title: 易于集成
+    details: 支持多种框架，方便集成到现有项目中。
 ---
