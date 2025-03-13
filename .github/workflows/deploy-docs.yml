@@ -24,7 +24,9 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Build docs
-        run: npm run build
+        run: |
+          cd docs  # 确保进入正确的目录
+          npm run build
 
       - name: Upload docs
         uses: actions/upload-artifact@v4
