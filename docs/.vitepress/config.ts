@@ -3,6 +3,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "Yx Components",
   description: "Yx Components",
+  base: "/yx-components/",
   themeConfig: {
     nav: [
       {
