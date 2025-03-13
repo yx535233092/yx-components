@@ -1,54 +1,35 @@
-name: deploy
+name: 部署VitePress
 
 on:
   push:
     branches:
-      - master
+      - main # 这段是在推送到 docs 分支时触发该命令
 
 jobs:
-  build:
-    name: Build docs
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-      - name: Setup Node
+      - name: Setup Node.js and pnpm
         uses: actions/setup-node@v3
+        with:
+          node-version: "20.10.0" # 设置 nodejs 的版本
 
       - name: Install pnpm
-        run: npm install -g pnpm
+        run: npm install -g pnpm # 全局安装 pnpm
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install # 使用 pnpm 安装依赖
 
-      - name: Build docs
-        run: |
-          cd docs  # 确保进入正确的目录
-          npm run build
-      - name: cd docs
-        run: |
-          cd ../  # 确保进入正确的目录
-
-      - name: Upload docs
-        uses: actions/upload-artifact@v4
-        with:
-          name: docs
-          path: ./docs/.vitepress/dist
-
-  deploy:
-    name: Deploy to GitHub Pages
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Download docs
-        uses: actions/download-artifact@v4
-        with:
-          name: docs
+      - name: Build VitePress
+        run: pnpm run docs:build # 这里是打包 vitepress 命令
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GH_TOKEN }}
-          publish_dir: ./docs/.vitepress/dist
+          github_token: ${{ secrets.PAT_TOKEN }} # 这一步很重要，单独看下面的大步骤，主要是用来给该脚本一些仓库权限
+          publish_dir: ./docs/.vitepress/dist # 指定该文件夹中的 dist
+          publish_branch: gh-pages # 推送到关联仓库的 gh-pages 分支
