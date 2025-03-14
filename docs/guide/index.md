@@ -15,6 +15,8 @@
 ```bash
 # 安装
 pnpm add @yx-components/components
+or
+npm i @yx-components/components
 
 # 使用
 import { createApp } from 'vue'

@@ -1,4 +1,17 @@
 :root {
   --yx-color-white: #fff;
   --yx-color-black: #000;
+  --yx-color-primary: #409eff;
+  --yx-color-success: #67c23a;
+  --yx-color-warning: #e6a23c;
+  --yx-color-danger: #f56c6c;
+
+  --yx-color-primary-hover: #66b1ff; /* hover 状态颜色 */
+  --yx-color-primary-active: #007bff; /* active 状态颜色 */
+  --yx-color-success-hover: #85d7a1; /* hover 状态颜色 */
+  --yx-color-success-active: #4caf50; /* active 状态颜色 */
+  --yx-color-warning-hover: #f7c45c; /* hover 状态颜色 */
+  --yx-color-warning-active: #d39e00; /* active 状态颜色 */
+  --yx-color-danger-hover: #f88c8c; /* hover 状态颜色 */
+  --yx-color-danger-active: #c62828; /* active 状态颜色 */
 }

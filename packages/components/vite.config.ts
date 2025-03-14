@@ -4,14 +4,7 @@ import { resolve } from "path";
 import dts from "vite-plugin-dts";
 
 export default defineConfig({
-  plugins: [
-    vue(),
-    dts({
-      include: ["**/*.ts", "**/*.vue"],
-      outDir: "dist",
-      rollupTypes: true,
-    }),
-  ],
+  plugins: [vue(), dts()],
   build: {
     lib: {
       entry: resolve(__dirname, "index.ts"),
@@ -25,10 +18,13 @@ export default defineConfig({
         globals: {
           vue: "Vue",
         },
+        // 修改 assetFileNames 确保返回字符串
+        assetFileNames: (assetInfo) => {
+          return assetInfo.name === "components.css"
+            ? "style.css"
+            : (assetInfo.name as string);
+        },
       },
     },
-  },
-  test: {
-    environment: "jsdom",
   },
 });

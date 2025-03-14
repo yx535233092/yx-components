@@ -15,14 +15,17 @@
 
 <script setup lang="ts">
 import { defineProps } from "vue";
-const props = defineProps<{
+
+export interface ButtonProps {
   type?: "primary" | "success" | "warning" | "danger";
   size?: "large" | "small";
   disabled?: boolean;
   loading?: boolean;
-}>();
+}
+
+const props = defineProps<ButtonProps>();
 </script>
 
-<style scoped>
+<style>
 @import "./Button.style.css";
 </style>

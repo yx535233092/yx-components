@@ -10,7 +10,15 @@
       <yx-button type="primary">全局注册的按钮</yx-button>
 
       <h2>方式2：直接使用组件（按需引入）</h2>
-      <yx-button type="success">按需引入的按钮</yx-button>
+      <yx-button size="small">按需引入的按钮</yx-button>
+
+      <h2>方式2：直接使用组件（按需引入）</h2>
+      <yx-button size="large" type="success">按需引入的按钮</yx-button>
+
+      <h2>方式2：直接使用组件（按需引入）</h2>
+      <yx-button size="large" type="danger">按需引入的按钮</yx-button>
+      <h2>方式2：直接使用组件（按需引入）</h2>
+      <yx-button size="large" type="warning">按需引入的按钮</yx-button>
     </div>
   </div>
 </template>

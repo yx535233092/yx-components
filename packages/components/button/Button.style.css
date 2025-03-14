@@ -1,24 +1,86 @@
 .yx-button {
   border: none;
-  border-radius: 5%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px; /* 字体大小 */
+  color: white; /* 字体颜色 */
+  background-color: #007bff; /* 默认背景颜色 */
+  transition: background-color 0.3s, transform 0.2s; /* 添加过渡效果 */
+  cursor: pointer;
+  user-select: none;
 }
 
 .yx-button--primary {
-  background-color: #409eff;
-  color: #fff;
+  background-color: var(--yx-color-primary);
 }
 
 .yx-button--success {
-  background-color: #67c23a;
-  color: #fff;
+  background-color: var(--yx-color-success);
 }
 
 .yx-button--warning {
-  background-color: #e6a23c;
-  color: #fff;
+  background-color: var(--yx-color-warning);
 }
 
 .yx-button--danger {
-  background-color: #f56c6c;
-  color: #fff;
+  background-color: var(--yx-color-danger);
+}
+
+.yx-button--primary:hover,
+.yx-button:hover {
+  background-color: var(--yx-color-primary-hover);
+  transform: scale(1.05); /* hover 放大效果 */
+}
+.yx-button--success:hover {
+  background-color: var(
+    --yx-color-success-hover
+  ); /* 使用变量设置 hover 背景颜色 */
+  transform: scale(1.05); /* hover 放大效果 */
+}
+.yx-button--warning:hover {
+  background-color: var(
+    --yx-color-warning-hover
+  ); /* 使用变量设置 hover 背景颜色 */
+  transform: scale(1.05); /* hover 放大效果 */
+}
+.yx-button--danger:hover {
+  background-color: var(
+    --yx-color-danger-hover
+  ); /* 使用变量设置 hover 背景颜色 */
+  transform: scale(1.05); /* hover 放大效果 */
+}
+.yx-button--primary:active,
+.yx-button:active {
+  background-color: var(
+    --yx-color-primary-active
+  ); /* 使用变量设置 active 背景颜色 */
+  transform: scale(0.95); /* active 缩小效果 */
+}
+.yx-button--success:active {
+  background-color: var(
+    --yx-color-success-active
+  ); /* 使用变量设置 active 背景颜色 */
+  transform: scale(0.95); /* active 缩小效果 */
+}
+.yx-button--warning:active {
+  background-color: var(
+    --yx-color-warning-active
+  ); /* 使用变量设置 active 背景颜色 */
+  transform: scale(0.95); /* active 缩小效果 */
+}
+.yx-button--danger:active {
+  background-color: var(
+    --yx-color-danger-active
+  ); /* 使用变量设置 active 背景颜色 */
+  transform: scale(0.95); /* active 缩小效果 */
+}
+
+.yx-button--large {
+  padding: 15px 30px; /* 大按钮的内边距 */
+  font-size: 18px; /* 大按钮的字体大小 */
+}
+
+.yx-button--small {
+  padding: 5px 10px; /* 小按钮的内边距 */
+  font-size: 14px; /* 小按钮的字体大小 */
 }
