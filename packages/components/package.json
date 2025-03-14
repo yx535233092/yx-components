@@ -1,12 +1,30 @@
 {
   "name": "@yx-components/components",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.ts",
+  "version": "1.0.1",
+  "description": "yx-components",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "build": "vite build",
     "test": "vitest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "vue",
+    "components"
+  ],
+  "author": "Yx",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "vite-plugin-dts": "^4.5.3"
+  }
 }

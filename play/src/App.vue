@@ -6,8 +6,11 @@
   <div class="playground">
     <h1>YX Components Playground</h1>
     <div class="component-display">
-      <!-- 在这里测试组件 -->
-      <yx-button type="primary">123</yx-button>
+      <h2>方式1：使用插件方式（全局注册）</h2>
+      <yx-button type="primary">全局注册的按钮</yx-button>
+
+      <h2>方式2：直接使用组件（按需引入）</h2>
+      <yx-button type="success">按需引入的按钮</yx-button>
     </div>
   </div>
 </template>
@@ -22,5 +25,11 @@
   padding: 20px;
   border: 1px solid #eee;
   border-radius: 4px;
+}
+
+h2 {
+  margin: 20px 0 10px;
+  font-size: 18px;
+  color: #333;
 }
 </style>

@@ -1,5 +1,5 @@
 import Button from "./Button.vue";
-import { App } from "vue";
+import type { App } from "vue";
 
 export default {
   install(app: App) {
