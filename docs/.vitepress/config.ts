@@ -38,7 +38,10 @@ export default defineConfig({
       "/requires/": [
         {
           text: "需求文档",
-          items: [{ text: "Button", link: "/requires/button.r.md" }],
+          items: [
+            { text: "Button", link: "/requires/button.r.md" },
+            { text: "VirtualList", link: "/requires/virtualList.r.md" },
+          ],
         },
       ],
     },

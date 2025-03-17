@@ -1,0 +1,65 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="介绍/YX Components" />
+
+# YX Components
+
+YX Components 是一个基于 Vue 3 的组件库，提供了一系列美观、易用的 UI 组件，帮助开发者快速构建现代化的 Web 应用。
+
+## 特性
+
+- 🚀 基于 Vue 3 和 TypeScript 开发
+- 🎨 提供美观的默认主题
+- 📦 支持按需引入
+- 📱 响应式设计，适配各种屏幕尺寸
+- 🔧 可定制性强，支持主题定制
+
+## 安装
+
+```bash
+# 使用 npm
+npm install @yx-components/components
+
+# 使用 yarn
+yarn add @yx-components/components
+
+# 使用 pnpm
+pnpm add @yx-components/components
+```
+
+## 使用
+
+### 全局引入
+
+```js
+import { createApp } from "vue";
+import App from "./App.vue";
+import YxComponents from "@yx-components/components";
+import "@yx-components/theme/dist/index.css";
+
+const app = createApp(App);
+app.use(YxComponents);
+app.mount("#app");
+```
+
+### 按需引入
+
+```js
+import { createApp } from "vue";
+import App from "./App.vue";
+import { Button } from "@yx-components/components";
+import "@yx-components/theme/dist/index.css";
+
+const app = createApp(App);
+app.component("yx-button", Button);
+app.mount("#app");
+```
+
+## 组件列表
+
+- Button 按钮
+- 更多组件开发中...
+
+## 贡献指南
+
+欢迎贡献代码或提出建议，请先阅读我们的贡献指南。
