@@ -45,8 +45,8 @@ export default defineConfig({
         {
           text: "需求文档",
           items: [
-            { text: "YxButton", link: "/requires/button.r.md" },
-            { text: "YxVirtualList", link: "/requires/virtualList.r.md" },
+            { text: "YxButton", link: "/requires/button.md" },
+            { text: "YxVirtualList", link: "/requires/virtualList.md" },
           ],
         },
       ],
