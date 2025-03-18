@@ -12,11 +12,11 @@ export default defineConfig({
       },
       {
         text: "组件",
-        link: "/components/",
+        link: "/components/button.md",
       },
       {
         text: "需求文档",
-        link: "/requires",
+        link: "/requires/button.md",
       },
     ],
     sidebar: {
