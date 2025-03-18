@@ -7,4 +7,6 @@ const VirtualListComponent = {
   },
 };
 
+export { VirtualList };
+
 export default VirtualListComponent;

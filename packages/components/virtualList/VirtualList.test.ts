@@ -18,7 +18,7 @@ describe("VirtualList", () => {
     });
 
     // 检查渲染的项数
-    expect(wrapper.findAll(".list-item")).toHaveLength(10); // 假设初始可见项为10
+    expect(wrapper.findAll(".yx-virtual-list-item")).toHaveLength(10); // 假设初始可见项为10
   });
 
   it("emits load-more event when scrolled to bottom", async () => {

@@ -32,11 +32,11 @@
 ## 4. 组件结构
 
 ```plaintext
-<VirtualList :data="data" :itemHeight="50" :bufferSize="5" @load-more="loadMoreData">
-  <template #item="{ item }">
-    <div class="list-item">{{ item.name }}</div>
+<yx-virtual-list :data="vldata"  :item-height="20" @load-more="console.log('load more')" >
+  <template #item="{ data }">
+    {{ data }}
   </template>
-</VirtualList>
+</yx-virtual-list>
 ```
 
 ## 5. 性能要求
@@ -55,4 +55,4 @@
 
 ## 8. 交付时间
 
-- 预计开发时间为 2 周，包含开发、测试和文档编写。
+- 预计开发时间为 2 周，包含开发、测试和文档编写.

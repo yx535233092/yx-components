@@ -10,13 +10,24 @@ const generateItems = (count: number, startIndex = 0) => {
   }));
 };
 
-const items = ref(generateItems(1000));
+const items = ref(generateItems(10000));
 
 // 加载更多数据
 const loadMore = () => {
   const newItems = generateItems(100, items.value.length);
   items.value = [...items.value, ...newItems];
 };
+
+const vldata = ref<any[]>([]);
+vldata.value = new Array(1000).fill({
+  name: "Item",
+  description: "This is the description for item",
+});
+vldata.value = vldata.value.map((item, index) => {
+  return {
+    index: index,
+  };
+});
 </script>
 
 <template>
@@ -49,21 +60,15 @@ const loadMore = () => {
       <h2>虚拟列表</h2>
       <div class="demo-container">
         <h2>虚拟列表示例</h2>
-        <div class="list-wrapper">
-          <yx-virtual-list
-            :data="items"
-            :item-height="80"
-            :buffer-size="5"
-            @load-more="loadMore"
-          >
-            <template #item="{ item }">
-              <div class="list-item">
-                <h3>{{ item.name }}</h3>
-                <p>{{ item.description }}</p>
-              </div>
-            </template>
-          </yx-virtual-list>
-        </div>
+        <yx-virtual-list
+          :data="vldata"
+          :item-height="20"
+          @load-more="console.log('load more')"
+        >
+          <template #item="{ data }">
+            {{ data.index + 1 }}
+          </template>
+        </yx-virtual-list>
       </div>
     </div>
   </div>
