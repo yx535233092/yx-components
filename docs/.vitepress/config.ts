@@ -32,7 +32,13 @@ export default defineConfig({
       "/components/": [
         {
           text: "组件",
-          items: [{ text: "Button", link: "/components/button.md" }],
+          items: [
+            { text: "Button", link: "/components/button.md" },
+            {
+              text: "YxVirtualList",
+              link: "/components/virtualList.md",
+            },
+          ],
         },
       ],
       "/requires/": [
