@@ -25,7 +25,7 @@ export default defineConfig({
           text: "指南",
           items: [
             { text: "介绍", link: "/guide/" }, // 确保链接正确
-            { text: "快速开始", link: "/guide/getting-started" },
+            { text: "快速开始", link: "/guide/getting-started.md" },
           ],
         },
       ],
